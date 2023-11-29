@@ -6,11 +6,14 @@ import { Provider } from 'react-redux'
 import './index.css'
 import store from './redux/store'
 import router from './routes'
+import { ProvidersReactQuery } from './providersReactQuery'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
+    <ProvidersReactQuery>
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
+    </ProvidersReactQuery>
   </React.StrictMode>,
 )
