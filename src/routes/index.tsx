@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
-import HomePage from '../pages/home'
+import MovieDetailPage from '../pages/movieDetail'
 import ErrorPage from '../pages/404'
 import ProfilePage from '../pages/profile'
 import MoviesPage from '../pages/movies'
@@ -7,7 +7,7 @@ import MoviesPage from '../pages/movies'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />,
+    element: <MoviesPage />,
     errorElement: <ErrorPage />
   },
   {
@@ -15,8 +15,12 @@ const router = createBrowserRouter([
     element: <ProfilePage />
   },
   {
-    path: '/movies',
+    path: '/movie',
     element: <MoviesPage />
+  },
+  {
+    path: '/movie/:id',
+    element: <MovieDetailPage />
   }
 ])
 
