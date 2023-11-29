@@ -20,7 +20,7 @@ export const useGetMovies = () => {
 
 export const useGetMovieById = (id: string) => {
   return useQuery({
-    queryKey: ['movies'],
+    queryKey: ['movie', id],
     queryFn: async () => {
       const res = await getMovieById(id)
       const result = res.data
